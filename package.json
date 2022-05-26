@@ -1,0 +1,48 @@
+{
+  "name": "@yuo/vite-plugin-style-import",
+  "version": "1.0.1",
+  "description": "@yuo/vite的依赖插件",
+  "main": "dist/index.js",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "author": "Perfumere",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "vite",
+    "@yuo/vite",
+    "style",
+    "import",
+    "css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anncwb/vite-plugin-style-import"
+  },
+  "bugs": {
+    "url": "https://github.com/anncwb/vite-plugin-style-import/issues"
+  },
+  "homepage": "https://github.com/anncwb/vite-plugin-style-import/tree/master/#readme",
+  "dependencies": {
+    "@rollup/pluginutils": "^4.1.2",
+    "change-case": "^4.1.2",
+    "debug": "^4.3.3",
+    "es-module-lexer": "^0.9.3",
+    "fs-extra": "^10.0.0",
+    "magic-string": "^0.25.7"
+  },
+  "peerDependencies": {
+    "@yuo/vite": ">=1.0.0"
+  }
+}
